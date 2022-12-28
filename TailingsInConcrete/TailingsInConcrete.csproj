@@ -28,24 +28,6 @@
     <Reference Include="Eco.Shared">
       <HintPath>..\Dependencies\Eco.Shared.dll</HintPath>
     </Reference>
-    <Reference Include="Eco.Simulation">
-      <HintPath>..\Dependencies\Eco.Simulation.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.Stats">
-      <HintPath>..\Dependencies\Eco.Stats.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.WebServer">
-      <HintPath>..\Dependencies\Eco.WebServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.World">
-      <HintPath>..\Dependencies\Eco.World.dll</HintPath>
-    </Reference>
-    <Reference Include="Eco.WorldGenerator">
-      <HintPath>..\Dependencies\Eco.WorldGenerator.dll</HintPath>
-    </Reference>
-    <Reference Include="EcoServer">
-      <HintPath>..\Dependencies\EcoServer.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
