@@ -28,6 +28,9 @@
     <Reference Include="Eco.Shared">
       <HintPath>..\Dependencies\Eco.Shared.dll</HintPath>
     </Reference>
+	<Reference Include="Eco.World">
+		<HintPath>..\Dependencies\Eco.World.dll</HintPath>
+	</Reference>
   </ItemGroup>
 
 </Project>
