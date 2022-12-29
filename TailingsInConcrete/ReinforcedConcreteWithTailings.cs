@@ -1,18 +1,10 @@
-﻿namespace Eco.Mods.TechTree
-{
-    using System;
-    using System.Collections.Generic;
-    using Eco.Gameplay.Components;
-    using Eco.Gameplay.DynamicValues;
-    using Eco.Gameplay.Items;
-    using Eco.Gameplay.Players;
-    using Eco.Gameplay.Skills;
-    using Eco.Shared.Utils;
-    using Eco.World;
-    using Eco.World.Blocks;
-    using Gameplay.Systems.TextLinks;
-    using Eco.Shared.Localization;
+﻿using Eco.Gameplay.Components;
+using Eco.Gameplay.Items;
+using Eco.Gameplay.Skills;
+using Eco.Shared.Localization;
 
+namespace Eco.Mods.TechTree
+{
     [RequiresSkill(typeof(MasonrySkill), 7)]
     public partial class ReinforcedConcreteWithTailings : RecipeFamily
     {
@@ -27,10 +19,10 @@
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(CementItem), 0.95),
-                    new IngredientElement(typeof(RebarItem), 1.9),
-                    new IngredientElement(typeof(TailingsItem), 2),
-                    new IngredientElement(typeof(CrushedMixedRockItem), 4.75),
+                    new IngredientElement(typeof(CementItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
+                    new IngredientElement(typeof(RebarItem), 2.0f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
+                    new IngredientElement(typeof(TailingsItem), 4f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
+                    new IngredientElement("CrushedRock", 5f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.
@@ -41,7 +33,7 @@
                     new CraftingElement<ReinforcedConcreteItem>(4),
                 });
             this.Recipes = new List<Recipe> { recipe };
-            this.ExperienceOnCraft = 145.73f; // Defines how much experience is gained when crafted.
+            this.ExperienceOnCraft = 1f; // Defines how much experience is gained when crafted.
 
             // Defines the amount of labor required and the required skill to add labor
             this.LaborInCalories = CreateLaborInCaloriesValue(25, typeof(MasonrySkill));
