@@ -8,9 +8,9 @@ using System.Collections.Generic;
 namespace Eco.Mods.TechTree
 {
     [RequiresSkill(typeof(MasonrySkill), 7)]
-    public partial class ReinforcedConcreteWithWetTailings : RecipeFamily
+    public partial class ReinforcedConcreteWithTailingsRecipe : RecipeFamily
     {
-        public ReinforcedConcreteWithWetTailings()
+        public ReinforcedConcreteWithTailingsRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
@@ -23,7 +23,7 @@ namespace Eco.Mods.TechTree
                 {
                     new IngredientElement(typeof(CementItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                     new IngredientElement(typeof(RebarItem), 2.0f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                    new IngredientElement(typeof(WetTailingsItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
+                    new IngredientElement(typeof(TailingsItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                     new IngredientElement("CrushedRock", 5f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                 },
 
@@ -41,11 +41,11 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(25, typeof(MasonrySkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(ReinforcedConcreteRecipe), start: 2.0f, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(ReinforcedConcreteWithTailingsRecipe), start: 2.0f, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Exotic Salad"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Reinforced Concrete"), recipeType: typeof(ReinforcedConcreteRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Reinforced Concrete"), recipeType: typeof(ReinforcedConcreteWithTailingsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

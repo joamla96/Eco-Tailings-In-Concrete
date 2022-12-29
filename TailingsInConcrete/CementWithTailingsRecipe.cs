@@ -8,9 +8,9 @@ using System.Collections.Generic;
 namespace Eco.Mods.TechTree
 {
     [RequiresSkill(typeof(MasonrySkill), 7)]
-    public partial class CementWithTailings : RecipeFamily
+    public partial class CementWithWetTailingsRecipe : RecipeFamily
     {
-        public CementWithTailings()
+        public CementWithWetTailingsRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
@@ -41,11 +41,11 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(70, typeof(MasonrySkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(CementRecipe), start: 1f, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(CementWithWetTailingsRecipe), start: 1f, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Exotic Salad"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Cement"), recipeType: typeof(CementRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Cement"), recipeType: typeof(CementWithWetTailingsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

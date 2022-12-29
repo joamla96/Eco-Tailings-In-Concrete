@@ -8,9 +8,9 @@ using System.Collections.Generic;
 namespace Eco.Mods.TechTree
 {
     [RequiresSkill(typeof(MasonrySkill), 7)]
-    public partial class ReinforcedConcreteWithTailings : RecipeFamily
+    public partial class ReinforcedConcreteWithWetTailingsRecipe : RecipeFamily
     {
-        public ReinforcedConcreteWithTailings()
+        public ReinforcedConcreteWithWetTailingsRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
@@ -23,7 +23,7 @@ namespace Eco.Mods.TechTree
                 {
                     new IngredientElement(typeof(CementItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                     new IngredientElement(typeof(RebarItem), 2.0f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                    new IngredientElement(typeof(TailingsItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
+                    new IngredientElement(typeof(WetTailingsItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                     new IngredientElement("CrushedRock", 5f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                 },
 
@@ -36,16 +36,16 @@ namespace Eco.Mods.TechTree
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 1f; // Defines how much experience is gained when crafted.
-
+            
             // Defines the amount of labor required and the required skill to add labor
             this.LaborInCalories = CreateLaborInCaloriesValue(25, typeof(MasonrySkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(ReinforcedConcreteRecipe), start: 2.0f, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(ReinforcedConcreteWithWetTailingsRecipe), start: 2.0f, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Exotic Salad"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Reinforced Concrete"), recipeType: typeof(ReinforcedConcreteRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Reinforced Concrete"), recipeType: typeof(ReinforcedConcreteWithWetTailingsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
