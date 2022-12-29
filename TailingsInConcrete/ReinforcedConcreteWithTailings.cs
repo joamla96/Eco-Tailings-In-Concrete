@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
                 {
                     new IngredientElement(typeof(CementItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                     new IngredientElement(typeof(RebarItem), 2.0f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
-                    new IngredientElement(typeof(TailingsItem), 4f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
+                    new IngredientElement(typeof(TailingsItem), 1f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                     new IngredientElement("CrushedRock", 5f, typeof(MasonrySkill), typeof(MasonryLavishResourcesTalent)),
                 },
 
