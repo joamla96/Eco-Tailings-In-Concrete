@@ -350,3 +350,5 @@ MigrationBackup/
 .ionide/
 
 Dependencies/
+/TailingsInConcrete/Mods/UserCode
+/TailingsInConcrete/Mods.zip

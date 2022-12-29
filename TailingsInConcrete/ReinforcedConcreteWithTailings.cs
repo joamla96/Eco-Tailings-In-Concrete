@@ -3,6 +3,8 @@ using Eco.Gameplay.Items;
 using Eco.Gameplay.Skills;
 using Eco.Shared.Localization;
 
+using System.Collections.Generic;
+
 namespace Eco.Mods.TechTree
 {
     [RequiresSkill(typeof(MasonrySkill), 7)]
