@@ -30,7 +30,7 @@ namespace Eco.Mods.TechTree
                 items: new List<CraftingElement>
                 {
                     new CraftingElement<CopperConcentrateItem>(1),
-                    new CraftingElement<TailingsItem>(1),
+                    new CraftingElement<TailingsItem>(typeof(MiningSkill), 1),
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 1.5f; // Defines how much experience is gained when crafted.
