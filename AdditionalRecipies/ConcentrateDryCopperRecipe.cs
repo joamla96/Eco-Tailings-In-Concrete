@@ -33,7 +33,7 @@ namespace Eco.Mods.TechTree
                     new CraftingElement<TailingsItem>(1),
                 });
             this.Recipes = new List<Recipe> { recipe };
-            this.ExperienceOnCraft = 2f; // Defines how much experience is gained when crafted.
+            this.ExperienceOnCraft = 1.5f; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
             this.LaborInCalories = CreateLaborInCaloriesValue(45, typeof(MiningSkill));
