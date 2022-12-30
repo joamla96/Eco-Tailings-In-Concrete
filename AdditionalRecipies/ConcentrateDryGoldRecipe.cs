@@ -39,7 +39,7 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(45, typeof(MiningSkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(ReinforcedConcreteWithWetTailingsRecipe), start: 2.0f, skillType: typeof(MasonrySkill), typeof(MasonryFocusedSpeedTalent), typeof(MasonryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(ConcentrateDryGoldRecipe), start: 2.0f, skillType: typeof(MiningSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Exotic Salad"
             this.ModsPreInitialize();
