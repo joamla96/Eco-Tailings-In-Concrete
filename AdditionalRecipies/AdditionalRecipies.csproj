@@ -19,9 +19,6 @@
     <Reference Include="Eco.Mods">
       <HintPath>..\Dependencies\Eco.Mods.dll</HintPath>
     </Reference>
-    <Reference Include="Eco.Networking.ENet">
-      <HintPath>..\Dependencies\Eco.Networking.ENet.dll</HintPath>
-    </Reference>
     <Reference Include="Eco.Plugins">
       <HintPath>..\Dependencies\Eco.Plugins.dll</HintPath>
     </Reference>
